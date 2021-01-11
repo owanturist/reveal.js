@@ -115,7 +115,6 @@ html * {
   margin-bottom: 0; }
 
 /* Ensure certain elements are never larger than the slide itself */
-.reveal img,
 .reveal video,
 .reveal iframe {
   max-width: 95%;
@@ -242,9 +241,6 @@ html * {
 
 .reveal small * {
   vertical-align: top; }
-
-.reveal img {
-  margin: 20px 0; }
 
 /*********************************************
  * LINKS

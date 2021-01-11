@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="dist/reset.css">
   <link rel="stylesheet" href="dist/reveal.css">
   <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="dist/tailwind.css" id="theme">
 
   <!-- Theme used for syntax highlighted code -->
   <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
@@ -18,44 +19,62 @@
 <body>
   <div class="reveal">
     <div class="slides">
-      <section data-auto-animate>
-        <h1>Auto-Animate</h1>
-      </section>
-      <section data-auto-animate>
-        <h1 style="margin-top: 100px; color: red;">Auto-Animate</h1>
-      </section>
       <section>
         Decode your JSON
       </section>
 
-      <section data-auto-animate>
-        <div class="flex justify-between">
-          <img style="height:16rem" class="flex-shrink" data-id="elm-logo" data-src="./static/elm-logo.png" />
-
-          <div class="flex flex-col justify-center items-start pl-4">
-            <div>Static strong typing</div>
-            <div>Functional</div>
-            <div>Pure</div>
-            <div>Immutable</div>
+      <section>
+        <section data-auto-animate>
+          <div class="flex justify-between space-x-4">
+            <img
+              class="h-64"
+              data-src="./static/elm-logo.png"
+            />
+  
+            <div
+              class="flex flex-col justify-center items-start"
+            >
+              <div class="fragment">Static strong typing</div>
+              <div class="fragment">Functional</div>
+              <div class="fragment">Pure</div>
+              <div class="fragment">Immutable</div>
+            </div>
+  
+            <img
+              class="h-64 fragment"
+              data-src="./static/js-logo.svg"
+            />
           </div>
+        </section>
+  
+        <section data-auto-animate>
+          <div class="flex justify-center">
+            <div class="flex flex-col justify-around">
+              <div class="fragment fade-right" data-fragment-index="1">HTTP</div>
+              <div class="fragment fade-right" data-fragment-index="2">Local Storage</div>
+            </div>
+            
+            <div class="flex justify-center">
+              <div class="relative">
+                <img
+                  class="relative z-10 fragment"
+                  style="height: 32rem;"
+                  data-src="./static/bubble.png"
+                  data-fragment-index="5"
+                />
+                <img
+                  class="h-64 absolute top-0 right-0 bottom-0 left-0 m-auto"
+                  data-src="./static/elm-logo.png"
+                />
+              </div>
+            </div>
 
-          <img class="h-64 flex-shrink" data-src="./static/js-logo.svg" />
-        </div>
-      </section>
-
-      <section data-auto-animate>
-        <div class="flex justify-between">
-          <img style="height:20rem" class="flex-shrink" data-id="elm-logo" data-src="./static/elm-logo.png" />
-
-          <div class="flex flex-col justify-center items-start pl-4">
-            <div>Static strong typing</div>
-            <div>Functional</div>
-            <div>Pure</div>
-            <div>Immutable</div>
+            <div class="flex flex-col justify-around">
+              <div class="fragment fade-left" data-fragment-index="3">WEB Sockets</div>
+              <div class="fragment fade-left" data-fragment-index="4">DOM</div>
+            </div>
           </div>
-
-          <img class="h-64 flex-shrink" data-src="./static/js-logo.svg" />
-        </div>
+        </section>
       </section>
     </div>
   </div>
@@ -70,6 +89,7 @@
     // - https://revealjs.com/config/
     Reveal.initialize({
       hash: true,
+      slideNumber: true,
 
       // Learn about plugins: https://revealjs.com/plugins/
       plugins: [RevealMarkdown, RevealHighlight, RevealNotes]

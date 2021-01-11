@@ -90,7 +90,6 @@
 }
 
 /* Ensure certain elements are never larger than the slide itself */
-.reveal img,
 .reveal video,
 .reveal iframe {
 	max-width: 95%;
@@ -245,10 +244,6 @@
 
 .reveal small * {
 	vertical-align: top;
-}
-
-.reveal img {
-	margin: $blockMargin 0;
 }
 
 
