@@ -23,58 +23,111 @@
         Decode your JSON
       </section>
 
-      <section>
-        <section data-auto-animate>
-          <div class="flex justify-between space-x-4">
+      <section data-auto-animate>
+        <div class="flex justify-between space-x-4">
+          <img
+            class="h-64"
+            data-src="./static/elm-logo.png"
+          />
+
+          <div
+            class="flex flex-col justify-center items-start"
+          >
+            <div class="fragment">Static strong typing</div>
+            <div class="fragment">Functional</div>
+            <div class="fragment">Pure</div>
+            <div class="fragment">Immutable</div>
+          </div>
+
+          <img
+            class="h-64 fragment"
+            data-src="./static/js-logo.svg"
+          />
+        </div>
+      </section>
+
+      <section data-auto-animate>
+        <div class="flex justify-center relative">
+          <div
+            class="absolute top-0 left-0 fragment fade-right"
+            data-id="http"
+            data-fragment-index="1"
+          >HTTP</div>
+
+          <div
+            class="absolute bottom-0 left-0 fragment fade-right"
+            data-fragment-index="2"
+          >Local Storage</div>
+          
+          <div class="relative">
             <img
-              class="h-64"
+              class="relative z-10 fragment"
+              style="height: 32rem;"
+              data-src="./static/bubble.png"
+              data-fragment-index="5"
+            />
+            <img
+              class="h-64 absolute top-0 right-0 bottom-0 left-0 m-auto"
               data-src="./static/elm-logo.png"
             />
-  
-            <div
-              class="flex flex-col justify-center items-start"
-            >
-              <div class="fragment">Static strong typing</div>
-              <div class="fragment">Functional</div>
-              <div class="fragment">Pure</div>
-              <div class="fragment">Immutable</div>
-            </div>
-  
+          </div>
+
+          <div
+            class="absolute top-0 right-0 fragment fade-left"
+            data-fragment-index="3"
+          >WEB Sockets</div>
+          <div
+            class="absolute bottom-0 right-0 fragment fade-left"
+            data-fragment-index="4"
+          >DOM</div>
+        </div>
+      </section>
+
+      <section data-auto-animate>
+        <div class="flex justify-between relative h-full">
+          <div
+            class="absolute -top-10 left-0"
+            data-id="http"
+          >HTTP</div>
+          
+          <div class="flex-grow">
+            <pre class="fragment"><code data-trim data-noescape>
+              {
+                "address": {
+                  "street": "Red Square 1"
+                }
+              }
+            </code></pre>
+
+            <pre class="fragment"><code data-trim data-noescape data-line-numbers="2">
+              {
+                "billing_address": {
+                  "street": "Red Square 1"
+                }
+              }
+            </code></pre>
+
+            <pre class="fragment"><code data-trim data-noescape>
+              response.address.street // ?
+            </code></pre>
+          </div>
+
+          <div class="relative">
             <img
-              class="h-64 fragment"
-              data-src="./static/js-logo.svg"
+              class="relative z-10 fragment fade-out"
+              style="height: 24rem;"
+              data-src="./static/bubble.png"
+            />
+            <img
+              class="h-48 absolute top-0 right-0 bottom-0 left-0 m-auto"
+              data-src="./static/elm-logo.png"
+            />
+            <img
+              class="h-24 text-red-500 absolute top-0 right-0 bottom-0 left-0 m-auto fragment"
+              data-src="./static/bug.svg"
             />
           </div>
-        </section>
-  
-        <section data-auto-animate>
-          <div class="flex justify-center">
-            <div class="flex flex-col justify-around">
-              <div class="fragment fade-right" data-fragment-index="1">HTTP</div>
-              <div class="fragment fade-right" data-fragment-index="2">Local Storage</div>
-            </div>
-            
-            <div class="flex justify-center">
-              <div class="relative">
-                <img
-                  class="relative z-10 fragment"
-                  style="height: 32rem;"
-                  data-src="./static/bubble.png"
-                  data-fragment-index="5"
-                />
-                <img
-                  class="h-64 absolute top-0 right-0 bottom-0 left-0 m-auto"
-                  data-src="./static/elm-logo.png"
-                />
-              </div>
-            </div>
-
-            <div class="flex flex-col justify-around">
-              <div class="fragment fade-left" data-fragment-index="3">WEB Sockets</div>
-              <div class="fragment fade-left" data-fragment-index="4">DOM</div>
-            </div>
-          </div>
-        </section>
+        </div>
       </section>
     </div>
   </div>
